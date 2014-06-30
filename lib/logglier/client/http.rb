@@ -25,7 +25,7 @@ module Logglier
       end
 
       def close
-        nil
+        @deliverer.close
       end
     end
   end

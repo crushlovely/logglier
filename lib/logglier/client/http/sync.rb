@@ -65,6 +65,12 @@ module Logglier
           end
         end
 
+        def close
+          @http.finish
+        rescue IOError
+          nil
+        end
+
         private
 
         def connect!
